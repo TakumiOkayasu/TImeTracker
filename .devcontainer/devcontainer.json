@@ -1,0 +1,27 @@
+{
+	"name": "PHP Develop Environment",
+	"dockerComposeFile": "compose.yaml",
+	"service": "app",
+	"workspaceFolder": "/workspace",
+	"forwardPorts": [
+		8080
+	],
+	"mounts": [
+		"source=${localWorkspaceFolder}/,target=/workspace,type=bind"
+	],
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"eamodio.gitlens",
+				"pizzacat83.codic",
+				"xdebug.php-debug",
+				"DEVSENSE.phptools-vscode",
+				"junstyle.php-cs-fixer",
+				"DEVSENSE.composer-php-vscode"
+			],
+			"settings": {
+				"terminal.integrated.defaultProfile.linux": "bash"
+			}
+		}
+	}
+}
